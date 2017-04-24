@@ -7,12 +7,13 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AboutModule } from './about/about.module';
 import { HomeModule } from './home/home.module';
-import { TagInputModule } from 'ng2-tag-input';
 import { SharedModule } from './shared/shared.module';
+
+import * as ng2ti from 'ng2-tag-input';
 
 
 @NgModule({
-  imports: [BrowserModule, HttpModule, AppRoutingModule, AboutModule, HomeModule, TagInputModule, SharedModule.forRoot()],
+  imports: [BrowserModule, HttpModule, AppRoutingModule, AboutModule, ng2ti.TagInputModule, HomeModule, SharedModule.forRoot()],
   declarations: [AppComponent],
   providers: [{
     provide: APP_BASE_HREF,
