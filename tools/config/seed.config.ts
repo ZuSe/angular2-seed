@@ -410,10 +410,26 @@ export class SeedConfig {
       '': 'node_modules/'
     },
     packages: {
+      'ts': {
+        'main': 'lib/plugin.js'
+      },
+      'typescript': {
+        'main': 'lib/typescript.js',
+        'meta': {
+          'lib/typescript.js': {
+            'exports': 'ts'
+          }
+        }
+      },
       [this.BOOTSTRAP_DIR]: {
         defaultExtension: 'js'
       }
-    }
+    },
+    map: {
+      'ts': 'node_modules/plugin-typescript',
+      'typescript': '/node_modules/typescript'
+    },
+    transpiler: 'ts'
   };
 
   /**
