@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Config } from './shared/config/env.config';
 import './operators';
+import { Angulartics2Mixpanel } from 'angulartics2';
 
 /**
  * This class represents the main application component.
@@ -12,7 +13,7 @@ import './operators';
   styleUrls: ['app.component.css'],
 })
 export class AppComponent {
-  constructor() {
-    console.log('Environment config', Config);
+  constructor(angulartics2Mixpanel: Angulartics2Mixpanel) {
+    console.log('Environment config', Config, angulartics2Mixpanel);
   }
 }
